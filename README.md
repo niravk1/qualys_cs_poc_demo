@@ -26,6 +26,7 @@ azdo : Azure DevOps
 - Terraform modules are not used for this POC/Demo setup for simplicity and easy understanding. 
 - Make sure either you stop the resources or delete the environment "terraform destroy", to avoid cloud charges. 
 - By default UbuntuServer 18.04-LTS is used for Registry mode Container Sensor VM
+- Reference to create Azure DevOps Personal Access Token "https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows" 
 
 # Setup 
 
@@ -40,7 +41,7 @@ cd qualys_cs_poc_demo/azure/cs_aks_acr_azdo
 
 - Update terraform.tfvars (Imp : Azure DevOps Org Url , Personal Access Token, Qualys Activation/Customer ID and POD URL)
 
-./env_prep.sh \
+chmod +x *.sh ; ./env_prep.sh \
 terraform init \
 terraform validate \
 terraform plan \
