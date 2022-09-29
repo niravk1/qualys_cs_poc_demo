@@ -17,6 +17,8 @@ jobs:
                 URL: ${{ secrets.URL }}
                 UNAME: ${{ secrets.USERNAME }}
                 PASS: ${{ secrets.PASSWORD }}
+            with:
+              directory: 'qualys_cs_poc_demo/blob/master/azure/cs_aks_acr_azdo/main.tf'
           - name: Upload SARIF file
             uses: github/codeql-action/upload-sarif@v1
             if: always() 
